@@ -65,6 +65,7 @@ nav ul a:hover {
 }
 
 #container-a {
+    position: relative;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -72,6 +73,7 @@ nav ul a:hover {
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    z-index: 0;
 }
 
 #container-a h1 {
@@ -336,4 +338,63 @@ form input, form textarea {
 
 form input::placeholder, form textarea::placeholder {
     color: var(--text-muted);
+}
+
+.image-cont {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    height: 500px;
+    width: 100%;
+    z-index: 0;
+    opacity: 50%;
+}
+
+.image-cont img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .about-me {
+
+        width: 90%;
+        position: static;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .about-me p {
+        width: 90%;
+    }
+
+    .inner-cont {
+        flex-direction: column;
+        height: auto;
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+
+    .inner-cont div {
+        max-width: 90%;
+    }
+
+    .image {
+        width: 90%;
+        height: auto;
+    }
+
+    .image img {
+        height: auto;
+        width: 100%;
+    }
+
+    form, .contact {
+        width: 90%;
+        height: auto;
+        padding: 1rem 0;
+    }
+    
 }
